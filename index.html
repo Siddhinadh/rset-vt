@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Campus Tour</title>
+    <style>
+        /* General reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header section styling */
+        header {
+            background-image: url('campus-image.jpg'); /* Replace with your campus image */
+            background-size: cover;
+            background-position: center;
+            height: 70vh; /* 70% of the viewport height */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* Header text styling */
+        header h1 {
+            font-size: 4em;
+            margin-bottom: 0.3em;
+        }
+
+        header p {
+            font-size: 1.5em;
+        }
+
+        /* View Campus Button Styling */
+        .view-campus-btn {
+            margin-top: 20px;
+            padding: 15px 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-campus-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Section after header */
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Embed Google Maps iframe */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 30px;
+        }
+
+        /* Section for video or virtual tour images */
+        .tour-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+        /* Video or image styling */
+        .tour-video {
+            width: 80%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Footer section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>RSET Virtual Tour</h1>
+        <p>Explore Our Campus Virtually</p>
+        <button class="view-campus-btn" onclick="scrollToTour()">View Campus</button>
+    </header>
+
+    <!-- Map Section -->
+    <section>
+        <h2>Find Us Here</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.478768645967!2d76.33284967413732!3d10.015905278158485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c34ffdddddd%3A0x1234567890!2sRajagiri%20School%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1695302400000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Video/Image Section -->
+    <section id="tour-media">
+        <h2>Virtual Campus Tour</h2>
+        <div class="tour-media">
+            <!-- Example Video -->
+            <video class="tour-video" controls>
+                <source src="your-virtual-tour.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- You can add images instead of video -->
+            <!-- <img src="virtual-tour-image.jpg" alt="Virtual Tour Image" class="tour-video"> -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>RSET Virtual Tour &copy; 2024</p>
+    </footer>
+
+    <!-- JavaScript for smooth scroll -->
+    <script>
+        function scrollToTour() {
+            document.getElementById('tour-media').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
