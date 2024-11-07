@@ -27,8 +27,6 @@
 
         header {
             color: white;
-            padding: 20px;
-            text-align: center;
         }
 
         header h1 {
@@ -56,39 +54,6 @@
             background-color: #00a019;
             color: white;
         }
-
-        section {
-            padding: 40px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .map-container {
-            max-width: 1200px;
-            height: 500px;
-            margin: 30px auto;
-        }
-
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header h2 {
-                font-size: 1.2em;
-            }
-
-            .view-campus-btn {
-                padding: 10px 25px;
-                font-size: 1em;
-            }
-
-            .map-container {
-                width: 100%;
-                height: 300px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -98,21 +63,10 @@
         <button class="view-campus-btn" onclick="scrollToTour()">View Campus</button>
     </header>
 
-    <!-- Main Content Section for Campus Tour -->
-    <section id="tour-media">
-        <h3>Take a Tour of Our Campus</h3>
-        <p>Explore the facilities and areas of our campus virtually. Below is an interactive map of our campus.</p>
-        <div class="map-container">
-            <!-- Embed a Google Map or any other interactive map here -->
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XmHeJlYle8odHZaMlRIzXw9pbM8WzpI&ehbc=2E312F" width="100%" height="100%"></iframe>
-        </div>
-    </section>
-
     <script>
         function scrollToTour() {
-            document.getElementById('tour-media').scrollIntoView({ behavior: 'smooth' });
+            // Placeholder function, if you wish to implement scroll functionality
         }
     </script>
-
 </body>
 </html>
